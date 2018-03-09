@@ -11,7 +11,7 @@ const mongoose = require('mongoose');
 // DB Setup
 mongoose.connect('mongodb://localhost/auth');
 
-// App Setup - getting express working way we want it to
+// App Setup - getting express working the way we want it to
 app.use(morgan('combined')); // express middleware - logging
 app.use(bodyParser.json({ type: '*/*' })); // express middleware - parse incoming requests
 router(app);
