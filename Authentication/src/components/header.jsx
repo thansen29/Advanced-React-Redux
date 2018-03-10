@@ -11,10 +11,10 @@ class Header extends React.Component {
     } else {
       return [
         <li className="nav-item" key={ 1 }>
-          <Link to="/signin">Sign In</Link>
+          <Link className="nav-link" to="/signin">Sign In</Link>
         </li>,
         <li className="nav-item" key={ 2 }>
-          <Link to="/signup">Sign Up</Link>
+          <Link className="nav-link" to="/signup">Sign Up</Link>
         </li>
       ];
     }
