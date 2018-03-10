@@ -10,7 +10,6 @@ function tokenForUser(user) {
 exports.signin = function(req, res, next) {
   // User has already had their email and password auth'd
   // We just need to give them a token
-
   res.send({ token: tokenForUser(req.user) });
 
 };
@@ -29,6 +28,7 @@ exports.signup = function(req, res, next) {
     if(err) { return next(err); }
 
     if(existingUser) {
+      console.log(existingUser);
       return res.status(422).send({ error: 'Email is in use' });
     }
 
